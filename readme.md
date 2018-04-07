@@ -7,7 +7,7 @@
 
 ![title image](assets/images/title.PNG)
 
-##ToDo:
+## ToDo:
 - Add Firebase integration for user sign-in/create account (to open new page for use to view all playlists)
 - Add search feature to search for mixtapes by name
 - Add share feature to email friends a link to your mixtape
