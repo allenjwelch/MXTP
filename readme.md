@@ -2,8 +2,9 @@
 
 ### Team Members:  Susan Davenport, Allen Welch, Eddie Rodriguez
 
-### GitHub URL:  https://github.com/allenjwelch/MXTP/
-### Deployed URL:  https://erodriguez87.github.io/mixtape/
+#### GitHub URL:  https://github.com/allenjwelch/MXTP/
+#### Deployed URL: https://allenjwelch.github.io/MXTP/
+#### Original URL:  https://erodriguez87.github.io/mixtape/
 
 ![title image](assets/images/title.PNG)
 
