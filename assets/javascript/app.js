@@ -30,12 +30,12 @@
         var fbUserTapeSelection = snapshot.child('mixtapeInfo/userTapeSelection').val();
         // console.log(fbMixtapeName, fbPlaylist, fbUserTapeSelection);
 
-        // console.log(fbPlaylist[0].values[0].trackName);
-        var song1 = fbPlaylist[0].values[0].trackName + ' by ' + fbPlaylist[0].values[0].artist; 
-        var song2 = fbPlaylist[0].values[1].trackName + ' by ' + fbPlaylist[0].values[1].artist; 
-        var song3 = fbPlaylist[0].values[2].trackName + ' by ' + fbPlaylist[0].values[2].artist; 
-        var song4 = fbPlaylist[0].values[3].trackName + ' by ' + fbPlaylist[0].values[3].artist; 
-        var song5 = fbPlaylist[0].values[4].trackName + ' by ' + fbPlaylist[0].values[4].artist; 
+        // // console.log(fbPlaylist[0].values[0].trackName);
+        // var song1 = fbPlaylist[0].values[0].trackName + ' by ' + fbPlaylist[0].values[0].artist; 
+        // var song2 = fbPlaylist[0].values[1].trackName + ' by ' + fbPlaylist[0].values[1].artist; 
+        // var song3 = fbPlaylist[0].values[2].trackName + ' by ' + fbPlaylist[0].values[2].artist; 
+        // var song4 = fbPlaylist[0].values[3].trackName + ' by ' + fbPlaylist[0].values[3].artist; 
+        // var song5 = fbPlaylist[0].values[4].trackName + ' by ' + fbPlaylist[0].values[4].artist; 
 
 
         // === create new divs for recent playlists
@@ -49,9 +49,15 @@
             tapeImage.attr('src', fbUserTapeSelection); 
             tempImageDiv.append(tapeImage, tapeLabel); 
         var tempPlaylistDiv = $('<div class="card-content">'); 
-          var songs = $('<ul>'); 
-                  
-          songs.append(song1 + '<br>' + song2+ '<br>' + song3+ '<br>' + song4+ '<br>' + song5);
+        var songs = $('<ul>'); 
+
+        for (i = 0; i < fbPlaylist[0].values.length; i++) {
+          var song = `<li> ${fbPlaylist[0].values[i].trackName} by ${fbPlaylist[0].values[i].artist}`; 
+            songs.append(song); 
+          }
+
+          // songs.append(song1 + '<br>' + song2+ '<br>' + song3+ '<br>' + song4+ '<br>' + song5);
+
 
           tempPlaylistDiv.html(songs); 
 
@@ -109,7 +115,10 @@
       $(".mixtapeInfoSave").removeAttr('disabled');
       $(".mixtapeInfoSave").addClass('pulse');
       
-    } // END if
+    } else {
+      M.toast({html: 'Hold up! Your MixTape must have at least 5 songs before you can mix!'})
+
+    }// END if
   }); 
 
   $('.mixtapeInfoSave').on('click', function() {
