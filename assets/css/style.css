@@ -243,4 +243,8 @@
       grid-column: 2; 
     }
 
+    .mixtapeLabel > h5{
+      font-size: 18px; 
+    }
+
 /* ======== END MEDIA QUERIES ====== */
