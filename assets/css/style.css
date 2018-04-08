@@ -220,7 +220,11 @@
 /* ======== END PAGE TWO ============= */
 
 /* ======== MEDIA QUERIES ========= */
-
+  @media only screen and (max-width: 1200px) {
+    .mixtapeLabel > h5{
+      font-size: 16px; 
+    }
+  }
   @media only screen and (max-width: 820px) {
     .wrapper{
       grid-template-columns: repeat(2, 1fr); 
@@ -244,7 +248,14 @@
     }
 
     .mixtapeLabel > h5{
-      font-size: 18px; 
+      font-size: 20px; 
     }
+  }
+
+  @media only screen and (max-width: 550px) {
+    .mixtapeLabel > h5{
+      font-size: 12px; 
+    }
+  }
 
 /* ======== END MEDIA QUERIES ====== */
