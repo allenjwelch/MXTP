@@ -51,7 +51,7 @@
   
   #mixBtn {
     padding: 0 50px 0 50px; 
-    margin-left: 50px; 
+    margin: 20px 0 0 50px; 
   }
 
 .searchPlayTitles {
@@ -230,8 +230,17 @@
       grid-column:1/-1;
     }
 
-    /* .recentPlaylist {
-      grid-column:1/2;
-    } */
-  }
+    #mixBtn {
+      padding: 0 50px 0 50px; 
+      margin: 20px 0 0 0px; 
+    }
+
+    .recentPlaylist:nth-child(even) {
+      grid-column: 1; 
+    }
+
+    .recentPlaylist:nth-child(odd) {
+      grid-column: 2; 
+    }
+
 /* ======== END MEDIA QUERIES ====== */
